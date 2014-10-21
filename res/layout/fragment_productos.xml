@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+  >
+	<LinearLayout 
+	    android:id="@+id/LinearLayout_1"
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+ 	    android:orientation="horizontal">
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/fruits" 
+        android:contentDescription="@string/producto"
+        />
+    
+      <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/birthcake" 
+        android:contentDescription="@string/producto"
+        
+        />
+      
+        <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/bread" 
+        android:contentDescription="@string/producto"
+        
+        />
+        
+     </LinearLayout>
+     
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+ 	    android:orientation="horizontal"
+	    >
+	      <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Frutas y Verduras"
+         />
+    
+     <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Pasteleria"
+         />
+      
+       <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Panaderia"
+         />
+        
+         
+	    
+	</LinearLayout>
+     
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+ 	    android:orientation="horizontal"
+	    >
+	      <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ham"
+        android:contentDescription="@string/producto"
+        
+         />
+    
+      <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/lollipop"
+        android:contentDescription="@string/producto"
+        
+         />
+      
+        <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/fruits"
+		android:contentDescription="@string/producto"
+        
+        
+         />
+	    
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+ 	    android:orientation="horizontal"
+	    >
+	      <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Carnes Frias"
+         />
+    
+     <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Dulceria"
+         />
+      
+       <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="@string/producto"
+         />
+        
+         
+	    
+	</LinearLayout>
+    
+
+</LinearLayout>

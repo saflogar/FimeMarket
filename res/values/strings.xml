@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Supermarket</string>
+     <string name="menu_item_promociones">Promociones</string>
+     <string name="menu_item_mis_listas">Mis Listas</string>
+     <string name="menu_item_productos">Productos</string>
+     <string name="menu_item_cuenta">Cuenta</string>
+	 <string name="text_1">Lista 1</string>
+	 <string name="text_2">Lista 2</string>
+	 <string name="text_3">Lista 3</string>
+	 <string name="text_4">Lista 4</string>
+	 <string name="text_5">Lista 5</string>
+	 <string name="producto">producto</string>
+	 	 	 
+</resources>
