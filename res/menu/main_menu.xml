@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     
-    <item 
-        android:id="@+id/promociones"
-        android:title="@string/menu_item_promociones"
+    <item android:id="@+id/menu_item_add_list"
+        android:title="@string/menu_item_add_lista"
+        android:icon="@android:drawable/ic_menu_add"
+        android:showAsAction="ifRoom|withText"
         />
-    
-    <item android:id="@+id/mis_listas"
-        android:title="@string/menu_item_mis_listas"
-
-        />
-    <item android:id="@+id/productos"
-        android:title="@string/menu_item_productos"
-        
-        />
-    <item android:id="@+id/cuenta"
-        android:title="@string/menu_item_cuenta"/>
-
+   
 </menu>

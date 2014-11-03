@@ -1,9 +1,9 @@
-package com.fime.supermarket;
+																						package com.fime.supermarket;
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
 
-
+ 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,7 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainMenuFragment extends ListFragment{
-	ArrayList<String> list = new ArrayList<String>();
+//	ArrayList<String> list = new ArrayList<String>();
 	
 	String[] titles = {"Promociones","Mis Listas","Productos","Cuenta"};
 	Integer[] imageId ={R.drawable.offer,R.drawable.icon_android,R.drawable.ic_productos,R.drawable.ic_action_person};
@@ -53,6 +53,28 @@ public class MainMenuFragment extends ListFragment{
 		 fmTrans.addToBackStack(null);
 		 fmTrans.commit();	
 		}
+		
+		if (getListAdapter().getItem(position).equals("Promociones"))
+		{
+			 
+		 fragment = new FragmentPromociones();
+		 android.support.v4.app.FragmentTransaction fmTrans = getActivity().getSupportFragmentManager().beginTransaction();
+		 fmTrans.replace(R.id.activity_main, fragment);
+		 fmTrans.addToBackStack(null);
+		 fmTrans.commit();	
+		}
+		
+		if (getListAdapter().getItem(position).equals("Cuenta"))
+		{
+			 
+		 fragment = new FragmentCuenta();
+		 android.support.v4.app.FragmentTransaction fmTrans = getActivity().getSupportFragmentManager().beginTransaction();
+		 fmTrans.replace(R.id.activity_main, fragment);
+		 fmTrans.addToBackStack(null);
+		 fmTrans.commit();	
+		}
+		
+		
 		
 		
 	}

@@ -2,15 +2,27 @@
 <resources>
 
     <string name="app_name">Supermarket</string>
-     <string name="menu_item_promociones">Promociones</string>
+     <string name="menu_item_add_lista">Nueva Lista</string>
      <string name="menu_item_mis_listas">Mis Listas</string>
      <string name="menu_item_productos">Productos</string>
      <string name="menu_item_cuenta">Cuenta</string>
 	 <string name="text_1">Lista 1</string>
+	 <string name="text_1.1"></string>
 	 <string name="text_2">Lista 2</string>
 	 <string name="text_3">Lista 3</string>
 	 <string name="text_4">Lista 4</string>
 	 <string name="text_5">Lista 5</string>
-	 <string name="producto">producto</string>
-	 	 	 
+	 <string name="producto">Producto</string>
+	 <string name= "descripcion_imagen">Imagen descripcion</string>
+	 <string name="cuenta_nombre">Nombre:</string>
+	 <string name="cuenta_direccion">Direccion:</string>
+	 <string name="cuenta_correo">Correo:</string>
+	 <string name="boton_agregar">Agregar</string>
+	 <string name="boton_eliminar">Eliminar</string>
+	 <string name="boton_modificar">Modificar</string>
+	 <string name="productos_frutas_y_veduras">Frutas y Verduras</string>
+	 <string name="productos_pasteleria">Pasteleria</string>
+	 <string name="productos_carnes_frias">Carnes Frias</string>
+	 <string name="productos_"></string>
+	 
 </resources>

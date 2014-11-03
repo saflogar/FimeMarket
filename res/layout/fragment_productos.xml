@@ -45,13 +45,13 @@
 	      <TextView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="Frutas y Verduras"
+        android:text="@string/productos_frutas_y_veduras"
          />
     
      <TextView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="Pasteleria"
+        android:text="@string/productos_pasteleria"
          />
       
        <TextView

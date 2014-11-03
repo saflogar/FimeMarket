@@ -17,7 +17,7 @@
         android:id="@+id/ImageView_custom_view"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        
+        android:contentDescription="@string/descripcion_imagen"
         android:layout_gravity="right"
         />
   

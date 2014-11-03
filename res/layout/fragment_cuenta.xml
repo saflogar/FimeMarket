@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/descripcion_imagen"
+        android:src="@drawable/bg_player_profile_default_big" />
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/descripcion_imagen"
+        android:text="@string/cuenta_nombre"
+		
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:contentDescription="@string/descripcion_imagen"
+        android:layout_height="wrap_content"
+        android:text="@string/cuenta_direccion" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/descripcion_imagen"
+        android:text="@string/cuenta_correo" />
+
+</LinearLayout>
