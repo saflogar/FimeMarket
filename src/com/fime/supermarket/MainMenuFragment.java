@@ -1,4 +1,4 @@
-																						package com.fime.supermarket;
+package com.fime.supermarket;
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
