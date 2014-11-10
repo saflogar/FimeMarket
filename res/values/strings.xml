@@ -25,4 +25,15 @@
 	 <string name="productos_carnes_frias">Carnes Frias</string>
 	 <string name="productos_"></string>
 	 
+	 <!--fragment_lista_nueva-->
+	 
+	 <string name="fragment_lista_nueva_titulo"></string>
+	 
+	 <!-- XXXXXXXXXXXXXXXXXX -->
+	 
+	 <!-- fragment_lista_seleccion -->
+	<string name="fragment_lista_seleccion_TextView_titulo">Titulo</string>
+	
+	 <!-- ***************************** -->
+	 
 </resources>

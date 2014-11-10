@@ -6,42 +6,57 @@
     android:gravity="center_horizontal"
      >
     
-	 
+	 <LinearLayout 
+	     android:id="@+id/LinearLayout_fragment_listas"
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:gravity="center"
+	    
+	     
+	     >
   	  <ImageButton
-        android:id="@+id/imageButton1"
+        android:id="@+id/imageButton_add"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="@drawable/button_add_01"
         android:contentDescription="@string/producto"
-		android:layout_alignParentTop="true"
+		android:layout_marginRight="10dp"
+		android:layout_marginLeft="10dp"
+		android:clickable="true"
 		
         />
     
       <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imageButton_delete"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="@drawable/button_delete_icon"
         android:contentDescription="@string/producto"
-        android:layout_toRightOf="@id/imageButton1"
-        
+        android:clickable="true"
+         android:layout_marginRight="10dp"
+		android:layout_marginLeft="10dp"
         />
       
         <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/imageButton_modify"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="@drawable/modify_button_hi"
         android:contentDescription="@string/producto"
-        android:layout_toRightOf="@id/imageButton2"
+        android:clickable="true"
+         android:layout_marginRight="10dp"
+		android:layout_marginLeft="10dp"
         
         
         />
+        </LinearLayout>
         <ListView 
             android:id="@android:id/list"
-            android:layout_below="@id/imageButton2"
+            android:layout_below="@id/LinearLayout_fragment_listas"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/s"
+            android:choiceMode="singleChoice"
             ></ListView>
      
             
