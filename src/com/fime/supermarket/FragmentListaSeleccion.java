@@ -1,8 +1,18 @@
 package com.fime.supermarket;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +21,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class FragmentListaSeleccion extends ListFragment{
-	private String[] titles = {};
-	private Integer[] images={};
+	private String[] titles ;
+	private Integer[] images;
+	private Integer[] puntos;
+	private String mTitle;
+	private static final String TAG = "FragmentListasSeleccion";
 	public static final String TITLE = "com.fime.supermarket.fragmentlistaseleccion.title";
 	
 	public static FragmentListaSeleccion newInstance(String mtitle)
@@ -28,9 +41,9 @@ public class FragmentListaSeleccion extends ListFragment{
 	public void onCreate (Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		CustomAdapter adapter = new CustomAdapter(getActivity(), titles, images);
-		
-		setListAdapter(adapter);
+		mTitle = (String)getArguments().getSerializable(TITLE);
+		setRetainInstance(true);
+		new FetchProducts().execute();
 	}
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,9 +54,60 @@ public class FragmentListaSeleccion extends ListFragment{
 		View view = inflater.inflate(R.layout.fragment_lista_seleccion, container,false);
 		TextView textView =(TextView) view.findViewById(R.id.fragment_lista_seleccion_TextView_Titulo);
 		textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.fruits, 0, 0, 0);
-		textView.setText((String)getArguments().getSerializable(TITLE));
+		textView.setText(mTitle);
 		
 		return view;
+	}
+	
+	private class FetchProducts extends AsyncTask<Void,Void,Void>
+	{
+		private JSONParser parser = new JSONParser();
+
+		@Override
+		protected Void doInBackground(Void... params) {
+			// TODO Auto-generated method stub
+			List<NameValuePair> parameters = new ArrayList<NameValuePair>();
+			parameters.add(new BasicNameValuePair("categoria",mTitle));
+			JSONObject jsonObject = parser.makeHttpRequest("http://fimemarket.net46.net/fimemarket/productos.php", "GET",parameters);
+			titles = new String[jsonObject.length()-1];
+			images = new Integer[jsonObject.length()-1];
+			puntos = new Integer[jsonObject.length()-1];
+			int resourceID;
+			String puntuacion;
+			Log.d(TAG, jsonObject.toString());
+			for (int i = 0; i <= jsonObject.length()-1;i++)
+			{
+				try {
+					titles[i] = jsonObject.getJSONObject(""+i).getString("pro_descripcion");
+					resourceID = getResources().getIdentifier(jsonObject.getJSONObject(""+i).getString("pro_imagen"), "drawable", "com.fime.supermarket");
+					images[i] = resourceID;
+					Log.d(TAG, jsonObject.getJSONObject(""+i).getString("pro_puntos"));
+					puntuacion = jsonObject.getJSONObject(""+i).getString("pro_puntos");
+					puntos[i] =  jsonObject.getJSONObject(""+i).getInt("pro_puntos");
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+				
+				
+			}
+			
+			return null;
+		}
+		
+		@Override
+		protected void onPostExecute(Void result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			CustomAdapterProducts adapter = new CustomAdapterProducts(getActivity(), titles, images,puntos);
+			setListAdapter(adapter);
+		}
+		
+		
+		
+		
 	}
 	
 

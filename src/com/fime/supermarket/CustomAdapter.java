@@ -23,6 +23,8 @@ public class CustomAdapter extends ArrayAdapter<String> {
 		this.context= context;
 	}
 	
+	
+	@Override
 	public View getView(int position, View view, ViewGroup parent) {
 		LayoutInflater inflater = context.getLayoutInflater();
 		View rowView= inflater.inflate(R.layout.custom_view, null, true);
