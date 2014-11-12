@@ -35,7 +35,7 @@ public class CustomAdapterProducts extends ArrayAdapter<String>{
 		txtTitle.setText(titles[position]);
 		imageView.setImageResource(imageId[position]);
 		rating.setEnabled(false);
-		rating.setNumStars(puntuactions[position]);
+		rating.setRating(puntuactions[position]);
 		return rowView;
 		}
 

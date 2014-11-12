@@ -50,7 +50,7 @@ public class FragmentListaNueva extends ListFragment{
 			titles = new String[jsonObject.length()-1];
 			images = new Integer[jsonObject.length()-1];
 			int resourceID;
-			for (int i = 0; i <=jsonObject.length()-1;i++)
+			for (int i = 0; i <=jsonObject.length()-2;i++)
 			{
 				try {
 					titles[i] = jsonObject.getJSONObject(""+i).getString("cat_nombre");
