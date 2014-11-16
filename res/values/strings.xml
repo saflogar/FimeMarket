@@ -28,12 +28,22 @@
 	 <!--fragment_lista_nueva-->
 	 
 	 <string name="fragment_lista_nueva_titulo"></string>
+	 <string name="fragment_lista_nueva_button">Crear</string>
+	 
+	 <string name="fragment_lista_nueva_TextView_encabezado">Secciones:</string>
+	 
 	 
 	 <!-- XXXXXXXXXXXXXXXXXX -->
 	 
 	 <!-- fragment_lista_seleccion -->
 	<string name="fragment_lista_seleccion_TextView_titulo">Titulo</string>
+		<string name="fragment_lista_seleccion_Button_agregar">Agregar</string>
 	
 	 <!-- ***************************** -->
+	 
+	 <!-- dialog_nueva_lista -->
+	 <string name="dialog_nueva_lista_TextView_nombre">Nombre:</string>
+	 <string name="dialog_nueva_lista_EditText_hint">Nombre de la Lista</string>
+	 <!-- *************************** -->
 	 
 </resources>

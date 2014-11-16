@@ -2,6 +2,9 @@ package com.fime.supermarket;
 
 import java.util.ArrayList;
 
+import org.json.JSONObject;
+
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -86,6 +89,21 @@ public class FragmentListas extends ListFragment {
 		 if (previusSelection != null)
 		 previusSelection.setBackgroundColor(getResources().getColor(R.color.default_color));
 		 previusSelection = v;
+	}
+	
+	
+	private class FetchFragmentListas extends AsyncTask<Void, Void, Void>
+	{
+
+		@Override
+		protected Void doInBackground(Void... params) {
+			// TODO Auto-generated method stub
+			
+			
+			return null;
+		}
+		
+		
 	}
 	
 	
