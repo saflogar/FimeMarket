@@ -1,7 +1,9 @@
 package com.fime.supermarket;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
 
@@ -30,7 +32,7 @@ import android.widget.TextView;
 
 public class FragmentListaNueva extends ListFragment{
 	private ProgressDialog pDialog;
-
+	private String listName;
 	private String[] titles;
 	private Integer[] images;
 	private static final String TAG ="com.fime.fimemarket.FragmentListaNueva";
@@ -79,7 +81,10 @@ public class FragmentListaNueva extends ListFragment{
 
 				alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int whichButton) {
-				  String value = input.getText().toString();
+				  listName = input.getText().toString();
+				  
+				  new CreateNewList().execute();
+
 				  // Do something with value!
 				  }
 				});
@@ -87,11 +92,11 @@ public class FragmentListaNueva extends ListFragment{
 				alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 				  public void onClick(DialogInterface dialog, int whichButton) {
 				    // Canceled.
+					  CustomAdapterProducts.checkedBoxesTotal.clear();
 				  }
 				});
 
 				alert.show();
-				new CreateNewList().execute();
 				
 				
 			}
@@ -156,10 +161,15 @@ public class FragmentListaNueva extends ListFragment{
 		@Override
 		protected Void doInBackground(Void... params) {
 			// TODO Auto-generated method stub
+			//we gate the date
+			SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy HH:mm");
+			Calendar calendar = Calendar.getInstance();
+			String date = dateFormat.format(calendar.getTime());
 			
 			JSONParser parser = new JSONParser();
 			JSONArray objectProductos = new JSONArray();
 			JSONObject objectParameters = new JSONObject();
+			JSONObject objectLista = new JSONObject();
 			for (int i = 0; i < CustomAdapterProducts.checkedBoxesTotal.size();i++)
 			{
 				JSONObject objectProduct = new JSONObject();
@@ -174,7 +184,11 @@ public class FragmentListaNueva extends ListFragment{
 				
 			}
 			try {
+				objectLista.put("lista_titulo", listName);
+				objectLista.put("lista_fech_cr", date);
 				objectParameters.put("productos", objectProductos);
+				objectParameters.put("lista", objectLista);
+				
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

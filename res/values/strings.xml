@@ -46,4 +46,10 @@
 	 <string name="dialog_nueva_lista_EditText_hint">Nombre de la Lista</string>
 	 <!-- *************************** -->
 	 
+	 <!-- lista_context_menu -->
+	 
+	 <string name="lista_context_menu_item_eliminar">Eliminar</string>
+	 
+	 <!-- ****************************** -->
+	 
 </resources>

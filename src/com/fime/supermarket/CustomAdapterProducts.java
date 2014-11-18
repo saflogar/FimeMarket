@@ -19,6 +19,7 @@ public class CustomAdapterProducts extends ArrayAdapter<String>{
 	private final Integer[] imageId;
 	private final Integer[] puntuactions;
 	private final Activity context;
+	private boolean[] checkBoxState;
 	public static ArrayList<Integer> checkedBoxesTotal = new ArrayList<Integer>();
 	private ArrayList<Integer> checkedBoxes;
 	public CustomAdapterProducts(Activity context,String[] titles,Integer[] imageId,Integer[] puntuactions)
@@ -29,11 +30,21 @@ public class CustomAdapterProducts extends ArrayAdapter<String>{
 		this.context= context;
 		this.puntuactions = puntuactions;
 		checkedBoxes = new ArrayList<Integer>();
-		
+		checkBoxState = new boolean[titles.length];
 	}
 	
 	public ArrayList<Integer> getCheckedBoxes()
 	{
+		
+		for(int i = 0; i < checkBoxState.length;i++)
+		{
+			if (checkBoxState[i])
+			{
+				checkedBoxes.add(i);
+				
+			}
+			
+		}
 		return checkedBoxes;
 		
 	}
@@ -46,6 +57,7 @@ public class CustomAdapterProducts extends ArrayAdapter<String>{
 		ImageView imageView = (ImageView) rowView.findViewById(R.id.custom_view_products_ImageView_image);
 		RatingBar rating = (RatingBar) rowView.findViewById(R.id.custom_view_products_RatingBar_puntuation);
 		CheckBox cb = (CheckBox)rowView.findViewById(R.id.custom_view_products_CheckBox);
+		cb.setChecked(checkBoxState[position]);
 		final int pos = position;
 		cb.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			
@@ -53,9 +65,9 @@ public class CustomAdapterProducts extends ArrayAdapter<String>{
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				// TODO Auto-generated method stub
 				if (isChecked)
-					checkedBoxes.add(pos);
+					checkBoxState[pos]=true;
 				else
-					checkedBoxes.remove(pos);
+					checkBoxState[pos]=false;
 			}
 		});
 		txtTitle.setText(titles[position]);
@@ -64,5 +76,7 @@ public class CustomAdapterProducts extends ArrayAdapter<String>{
 		rating.setRating(puntuactions[position]);
 		return rowView;
 		}
+	
+	
 
 }
