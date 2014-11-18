@@ -62,11 +62,11 @@ public class FragmentListaSeleccion extends ListFragment{
 			Bundle savedInstanceState)
 	{
 		super.onCreateView(inflater, container, savedInstanceState);
-		
 		View view = inflater.inflate(R.layout.fragment_lista_seleccion, container,false);
-		TextView textView =(TextView) view.findViewById(R.id.fragment_lista_seleccion_TextView_Titulo);
-		textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.fruits, 0, 0, 0);
-		textView.setText(mTitle);
+		getActivity().setTitle(mTitle);
+		//TextView textView =(TextView) view.findViewById(R.id.fragment_lista_seleccion_TextView_Titulo);
+		//textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.fruits, 0, 0, 0);
+		//textView.setText(mTitle);
 		Button buttonCrear = (Button) view.findViewById(R.id.fragment_lista_seleccion_Button_Crear);
 		
 		buttonCrear.setOnClickListener(new OnClickListener() {

@@ -16,6 +16,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -39,9 +41,18 @@ public class FragmentListaMandado extends Fragment{
 	}
 	
 	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+		// TODO Auto-generated method stub
+		super.onCreateOptionsMenu(menu, inflater);
+
+		inflater.inflate(R.menu.menu_lista_mandado, menu);
+	}
+	
+	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		listaId = (Integer)getArguments().getSerializable(LISTA_ID);
+		setHasOptionsMenu(true);
 		super.onCreate(savedInstanceState);
 		
 	}

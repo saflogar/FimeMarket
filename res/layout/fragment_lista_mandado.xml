@@ -35,8 +35,8 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="0dp"
 	    android:layout_weight="1"
-	    android:text="1"
-	    android:background="@drawable/roundebutton"
+	    android:text="2"
+	    android:background="@drawable/roundebutton2"
 	    android:layout_gravity="center"
 	     />
 			<Button
@@ -50,8 +50,8 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="0dp"
 	    android:layout_weight="1"
-	    android:text="1"
-	    android:background="@drawable/roundebutton"
+	    android:text="3"
+	    android:background="@drawable/roundebutton3"
 	    android:layout_gravity="center"
 	     />
 				<Button
@@ -74,8 +74,8 @@
 	    android:layout_width="0dp"
 	    android:layout_height="wrap_content"
 	    android:layout_weight="1"
-	    android:text="1"
-	    android:background="@drawable/roundebutton"
+	    android:text="4"
+	    android:background="@drawable/roundebutton4"
 	    android:layout_gravity="center"
 	     />
 	<Button
@@ -89,8 +89,8 @@
 	    android:layout_width="0dp"
 	    android:layout_height="wrap_content"
 	    android:layout_weight="1"
-	    android:text="1"
-	    android:background="@drawable/roundebutton"
+	    android:text="5"
+	    android:background="@drawable/roundebutton5"
 	    android:layout_gravity="center"
 	     />
 

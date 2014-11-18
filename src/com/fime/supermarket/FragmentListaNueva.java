@@ -42,7 +42,6 @@ public class FragmentListaNueva extends ListFragment{
 		super.onCreate(savedInstanceState);
 		setRetainInstance(true);
 		new FetchCategories().execute();
-		getActivity().setTitle("Secciones:");
 	
 	}
 	
@@ -63,10 +62,12 @@ public class FragmentListaNueva extends ListFragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
+		getActivity().setTitle("Secciones:");
+
 		View v = inflater.inflate(R.layout.fragment_lista_nueva, container,false);
 		Button createButton = (Button)v.findViewById(R.id.fragment_lista_nueva_Button_Crear);
 		createButton.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -82,7 +83,7 @@ public class FragmentListaNueva extends ListFragment{
 				alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int whichButton) {
 				  listName = input.getText().toString();
-				  
+				  CustomAdapterProducts.checkedBoxesTotal.clear();
 				  new CreateNewList().execute();
 
 				  // Do something with value!

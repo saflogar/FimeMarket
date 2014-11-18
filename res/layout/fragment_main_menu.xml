@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TableRow >
+    </TableRow>
+        
+        <TableRow
+            android:layout_weight="2" >
+         
+                 <Button 
+                     android:id="@+id/button_ofertas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/menu_item_ofertas"
+                android:drawableLeft="@drawable/offer"
+                />
+               
+        </TableRow >
+               <TableRow
+            android:layout_weight="2" >
+         
+                 <Button 
+                     android:id="@+id/button_listas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/menu_item_mis_listas"
+                android:drawableLeft="@drawable/icon_android"
+                />
+               
+        </TableRow >
+        
+                 <TableRow
+            android:layout_weight="2" >
+         
+                 <Button 
+                                          android:id="@+id/button_productos"
+                     
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/menu_item_productos"
+                android:drawableLeft="@drawable/unnamed"
+                />
+                      <Button 
+                                               android:id="@+id/button_cuenta"
+                          
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/menu_item_cuenta"
+                android:drawableLeft="@drawable/ic_action_person"
+                />
+               
+        </TableRow >
+      
+
+</TableLayout>
+
+    
+    
+

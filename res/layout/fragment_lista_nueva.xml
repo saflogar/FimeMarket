@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         
         >
-   
+<!--  
         <TextView 
             android:id="@+id/fragment_lista_nueva_Textview_encabezado"
             android:text="@string/fragment_lista_nueva_TextView_encabezado"
@@ -17,7 +17,7 @@
             android:layout_weight="3"
             
             
-            />
+/>-->
         <Button 
             android:id="@+id/fragment_lista_nueva_Button_Crear"
             android:text="@string/fragment_lista_nueva_button"

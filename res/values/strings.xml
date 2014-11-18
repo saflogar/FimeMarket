@@ -3,9 +3,11 @@
 
     <string name="app_name">Supermarket</string>
      <string name="menu_item_add_lista">Nueva Lista</string>
-     <string name="menu_item_mis_listas">Mis Listas</string>
-     <string name="menu_item_productos">Productos</string>
-     <string name="menu_item_cuenta">Cuenta</string>
+     <string name="menu_item_mis_listas"> LISTAS</string>
+     <string name="menu_item_productos">PRODUCTOS</string>
+     <string name="menu_item_cuenta">CUENTA</string>
+          <string name="menu_item_ofertas">OFERTAS</string>
+     
 	 <string name="text_1">Lista 1</string>
 	 <string name="text_1.1"></string>
 	 <string name="text_2">Lista 2</string>
@@ -14,9 +16,9 @@
 	 <string name="text_5">Lista 5</string>
 	 <string name="producto">Producto</string>
 	 <string name= "descripcion_imagen">Imagen descripcion</string>
-	 <string name="cuenta_nombre">Nombre:</string>
+	 <string name="cuenta_nombre">Nombre:Sergio Albeto Flores</string>
 	 <string name="cuenta_direccion">Direccion:</string>
-	 <string name="cuenta_correo">Correo:</string>
+	 <string name="cuenta_correo">Correo:safgflores@hotmail.com</string>
 	 <string name="boton_agregar">Agregar</string>
 	 <string name="boton_eliminar">Eliminar</string>
 	 <string name="boton_modificar">Modificar</string>
@@ -51,5 +53,8 @@
 	 <string name="lista_context_menu_item_eliminar">Eliminar</string>
 	 
 	 <!-- ****************************** -->
+	 
+	 <!-- menu_lista_mandado -->
+	 <string name="menu_lista_mandado_informacion">informacion</string>
 	 
 </resources>

@@ -46,9 +46,8 @@ public class FragmentListas extends ListFragment {
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		getActivity().setTitle("Listas");
 		setHasOptionsMenu(true);
-		new FetchListas().execute();
+
 		
 	}
 	@Override
@@ -56,8 +55,11 @@ public class FragmentListas extends ListFragment {
 			 ViewGroup container,  Bundle savedInstanceState) 
 	{
 		super.onCreateView(inflater, container, savedInstanceState);
+		list.clear();
+		new FetchListas().execute();
 		View view = inflater.inflate(R.layout.fragment_listas, container,false);
-		
+		getActivity().setTitle("Listas");
+
 		ListView listView = (ListView) view.findViewById(android.R.id.list);
 		registerForContextMenu(listView);
 	//	ImageButton addButton = (ImageButton) view.findViewById(R.id.imageButton_add);
@@ -130,8 +132,19 @@ public class FragmentListas extends ListFragment {
 	public void onListItemClick(ListView l, View v, int position, long id) {
 		// TODO Auto-generated method stub
 		super.onListItemClick(l, v, position, id);
+		ArrayAdapter<String> adapter = (ArrayAdapter<String>)getListAdapter();
+		int listId=0;
+		String itemString = adapter.getItem(position);
+		for (Map.Entry<Integer, String> e : listas.entrySet())
+		{
+			if (e.getValue().equals(itemString))
+			{
+				 listId = e.getKey();
+				 Log.d(TAG, "id a enviar a listaMandado="+listId);
+			}
+		}
 		
-		Fragment fragment =  FragmentListaMandado.newInstance(position);
+		Fragment fragment =  FragmentListaMandado.newInstance(listId);
 		FragmentTransaction fmTrans = getActivity().getSupportFragmentManager().beginTransaction();
 		fmTrans.replace(R.id.activity_main, fragment);
 		fmTrans.addToBackStack(null);
@@ -251,6 +264,8 @@ public class FragmentListas extends ListFragment {
 			// TODO Auto-generated method stub
 			
 			super.onPostExecute(result);
+			
+
 			ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,list);
 			setListAdapter(adapter);
 			pDialog.dismiss();
