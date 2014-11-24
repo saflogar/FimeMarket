@@ -83,7 +83,6 @@ public class FragmentListaNueva extends ListFragment{
 				alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int whichButton) {
 				  listName = input.getText().toString();
-				  CustomAdapterProducts.checkedBoxesTotal.clear();
 				  new CreateNewList().execute();
 
 				  // Do something with value!
@@ -200,7 +199,8 @@ public class FragmentListaNueva extends ListFragment{
 			JSONObject jsonResult = parser.makeHttpRequest("http://fimemarket.net46.net/fimemarket/lista.php",
 					"POST", parameters);
 			Log.d(TAG, "Response="+jsonResult.toString());
-			
+			CustomAdapterProducts.checkedBoxesTotal.clear();
+
 			return null;
 		}
 		
